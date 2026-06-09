@@ -1,0 +1,14 @@
+{
+    "name": "nexph/scheduler",
+    "description": "Nexph Scheduler Engine",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Nexph\\Scheduler\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2"
+    }
+}
