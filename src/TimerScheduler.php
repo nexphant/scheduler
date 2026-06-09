@@ -2,6 +2,8 @@
 
 namespace Nexph\Scheduler;
 
+use Nexph\Runtime\Runtime;
+
 class TimerScheduler
 {
     private array $tasks = [];
@@ -23,15 +25,26 @@ class TimerScheduler
 
     private function createTimer(int $delay, callable $callback): mixed
     {
+        if (Runtime::available()) {
+            return Runtime::timer((float) $delay, $callback);
+        }
         return null;
     }
 
     private function createRepeatingTimer(int $interval, callable $callback): mixed
     {
+        if (Runtime::available()) {
+            return Runtime::timer((float) $interval, $callback, true);
+        }
         return null;
     }
 
     private function spawn(callable $callback): void
     {
+        if (Runtime::available()) {
+            Runtime::spawn($callback);
+            return;
+        }
+        $callback();
     }
 }
