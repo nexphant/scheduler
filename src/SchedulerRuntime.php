@@ -36,6 +36,9 @@ class SchedulerRuntime
             'overlap' => true,
             'cancelled' => false,
         ];
+        if ($this->running) {
+            $this->scheduleTask($this->tasks[$id]);
+        }
         return $this;
     }
 
@@ -53,6 +56,9 @@ class SchedulerRuntime
             'overlap' => true,
             'cancelled' => false,
         ];
+        if ($this->running) {
+            $this->scheduleTask($this->tasks[$id]);
+        }
         return $this;
     }
 
@@ -70,6 +76,9 @@ class SchedulerRuntime
             'overlap' => true,
             'cancelled' => false,
         ];
+        if ($this->running) {
+            $this->scheduleTask($this->tasks[$id]);
+        }
         return $this;
     }
 
@@ -90,6 +99,10 @@ class SchedulerRuntime
 
     public function start(): void
     {
+        if ($this->running) {
+            return;
+        }
+
         $this->running = true;
         
         foreach ($this->tasks as &$task) {
