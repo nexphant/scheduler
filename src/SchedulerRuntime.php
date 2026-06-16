@@ -1,9 +1,9 @@
 <?php
 
-namespace nexphant\Scheduler;
+namespace Nexphant\Scheduler;
 
-use nexphant\Runtime\Runtime;
-use nexphant\Lifecycle\TaskOwner;
+use Nexphant\Runtime\Runtime;
+use Nexphant\Lifecycle\TaskOwner;
 
 class SchedulerRuntime
 {

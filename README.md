@@ -1,4 +1,4 @@
-# nexphant Scheduler
+# Nexphant Scheduler
 
 Timer-based task scheduler.
 
