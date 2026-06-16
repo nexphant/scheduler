@@ -1,6 +1,6 @@
 {
     "name": "nexphant/scheduler",
-    "description": "nexphant Scheduler Engine",
+    "description": "Nexphant Scheduler Engine",
     "type": "library",
     "license": "MIT",
     "autoload": {
