@@ -1,11 +1,11 @@
-# Nexph Scheduler
+# nexphant Scheduler
 
 Timer-based task scheduler.
 
 ## Installation
 
 ```bash
-composer require nexph/scheduler
+composer require nexphant/scheduler
 ```
 
 ## License

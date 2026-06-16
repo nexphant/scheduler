@@ -1,11 +1,11 @@
 {
-    "name": "nexph/scheduler",
-    "description": "Nexph Scheduler Engine",
+    "name": "nexphant/scheduler",
+    "description": "nexphant Scheduler Engine",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Nexph\\Scheduler\\": "src/"
+            "nexphant\\Scheduler\\": "src/"
         }
     },
     "require": {
